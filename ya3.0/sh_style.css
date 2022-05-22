@@ -7,9 +7,8 @@ audio{
     margin-top: 12px;
     margin-bottom: 30px;
     border: 2px solid white;
-				box-shadow: 0px 0px 30px white;
-                border-radius: 30px;
-    animation: bmove 5s infinite; 
+				box-shadow: 10px 10px 30px rgb(0, 255, 34);
+                border-radius: 30px; 
 }
 @keyframes bmove{
     0%{box-shadow: 0px 0px 30px white;}
@@ -21,10 +20,12 @@ audio{
 body{
     background: black;
     color: white;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Nova Mono', monospace;
+    font-weight: 50px;
 }
 p{
     margin-top: 30px;
+    font-size: 1.2rem;
 }
 #ab{
    margin-top: 20px;  
@@ -71,9 +72,18 @@ ul{
     text-decoration: none;
     font-size: 50px;
     color: rgb(0, 247, 255);
+    box-shadow: 0px 10px 50px rgb(0, 247, 255);
+    border-radius: 100000px;
 }
 #tut{
     text-decoration: none;
     font-size: 50px;
     color: rgb(0, 247, 255);
+    box-shadow: 0px 10px 50px rgb(0, 247, 255);
+    border-radius: 100000px;
+}
+#gug{
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
 }
