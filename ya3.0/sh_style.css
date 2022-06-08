@@ -95,9 +95,9 @@ ul{
     width: 150px;
 }
 footer h4{
-    color: rgb(116, 116, 255);
+    color: whitesmoke;
     box-shadow: 0px 20px 50px rgb(116, 116, 255);
-    background: rgba(97, 104, 0, 0.616);
+    background: rgba(0, 0, 0, 0.616);
     border: 2px solid rgb(116, 116, 255);
     border-radius: 10px;
 }
