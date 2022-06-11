@@ -15,12 +15,10 @@ audio{
 }
 body{
     background:rgb(49, 49, 114);
-    background-attachment: fixed;
-    background-size: 100%;
     color: white;
     font-family: 'Nova Mono', monospace;
     font-weight: 50px;
-    padding: 0 300px;
+    padding: 0 200px;
 }
 p{
     margin-top: 30px;
