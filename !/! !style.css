@@ -20,7 +20,6 @@ body{
       font-size: 100px;
       margin: 0px;
       padding: 0px;
-      z-index: -1;
       display: flex;
       justify-content: center;
 }
@@ -29,19 +28,21 @@ body{
       100%{opacity: 100%; margin-bottom: 0px;}
 }
 .background2{
+      width: 100%;
       height: 400px;
       animation: animation 2s;
 }
 .p_1_background{
       animation: animation2 5s;
-      margin-right: 50px;
+      width: 100%;
 }
 .p_2_background{
       animation: animation3 6s;
+      width: 100%;
 }
 .p_3_background{
       animation: animation4 5s;
-      margin-right: 50px;
+      width: 100%;
 }
 .p_unique{
       font-size: 100px;
@@ -394,4 +395,8 @@ body{
       0%{opacity: 0%;}
       99%{opacity: 0%;}
       100%{opacity: 100%;}
+}
+.generalll{
+      width: 100%;
+      height: 100%;
 }
