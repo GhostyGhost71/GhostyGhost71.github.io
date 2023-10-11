@@ -1,0 +1,80 @@
+@media only screen and (max-height: 1000px) and (max-width: 800px) and (min-width: 20px) and (min-height: 20px){
+      .block1{
+          display: block;
+      }
+}
+body{
+      background-color: rgb(0, 0, 0);
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+}
+.img_block{
+      border: 1px solid white;
+      box-shadow: 4px 6px 1px rgb(96, 96, 96);
+      border-radius: 5px;
+}
+.a1{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      text-shadow: 0px 0px 20px rgb(255, 184, 184);
+      font-size: 25px;
+      background-image: url("Black\ Hole\ HD\ Wallpaper\ _\ HD\ обои.jfif");
+      border-radius: 10px;
+      transition: 0.2s ease;
+      background-size: 100%;
+}
+.return{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      text-shadow: 0px 0px 20px rgb(255, 184, 184);
+      font-size: 25px;
+      transition: 0.2s ease;
+      background-size: 100%;
+}
+.return:hover{
+      text-decoration: underline;
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 10px rgb(255, 255, 255);
+      background-size: 100%;
+      font-size: 30px;
+}
+.a1:hover{
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 0);
+      background-image: url("Black\ and\ white\ background\ _\ Черно-белый\ фон.jfif");
+      text-shadow: 1px 1px 40px rgb(255, 255, 255);
+      background-size: 100%;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.505);
+}
+.a1:active{
+      color: rgb(101, 183, 255);
+}
+.block1{
+      width: 400px;
+      height: 400px;
+      border: 1px solid white;
+      box-shadow: 0px 0px 15px rgb(255, 255, 255);
+      border-radius: 5px;
+      padding: 20px;
+      background-image: url("Menú.jfif");
+      background-size: 100%;
+      text-align: center;
+      display: inline-block;
+      margin: 20px;
+      animation: an1 0.1s ease-out;
+}
+.audio1{
+      height: 30px;
+      width: 300px;
+      padding-top: 20px;
+}
+.block1 > .text{
+      cursor: default;
+      font-size: 30px;
+      padding: 0px;
+      margin: 0px;
+}
+img{
+      padding: 0px;
+      margin: 0px;
+}

@@ -1,0 +1,907 @@
+@media screen and (max-height: 1200px) and (max-width: 850px) and (min-width: 20px) and (min-height: 20px){
+      .p_1_background, .p_2_background, .p_3_background, .background, .background2, .p_unique, .p_default1, .p_default2{
+          font-size: 70px;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          display: block;
+      }
+      
+      .p_unique{
+          font-size: 20px;
+          display: none;
+      }
+      img{
+            width: 200px;
+      }
+  *{
+      width: auto;
+      margin: 0px;
+      padding: 0px;
+      font-size: 20px;
+  }
+
+
+body{
+      background-color: #352b5b;
+      background-image: url("fon.jpg");
+      background-blend-mode: multiply;
+      background-size: auto;
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Phudu', cursive;
+      width: auto;
+      height: auto;
+      font-size: 20px;
+}
+.background{
+      width: auto;
+      height: auto;
+      animation: animation 1s;
+      text-align: center;
+      align-items: center;
+      text-shadow: #ab96ff 0px 0px 10px;
+      font-size: 100px;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+}
+@keyframes animation{
+      0%{opacity: 0%; margin-bottom: 1000px;}
+      100%{opacity: 100%; margin-bottom: 0px;}
+}
+.background2{
+      width: auto;
+      height: 400px;
+      animation: animation 2s;
+}
+.p_1_background{
+      animation: animation2 5s;
+      width: auto;
+}
+.p_2_background{
+      animation: animation3 6s;
+      width: auto;
+}
+.p_3_background{
+      animation: animation4 5s;
+      width: auto;
+}
+.p_unique{
+      font-size: 100px;
+      float: center;
+}
+.p_unique, .p_default1, .p_default2{
+      margin: 0px;
+      cursor: default;
+      width: auto;
+}
+@keyframes animation2{
+      0%{opacity: 0%;}
+      15%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+@keyframes animation3{
+      0%{opacity: 0%;}
+      30%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+@keyframes animation4{
+      0%{opacity: 0%;}
+      60%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.what_do_we_do{
+      background: black;
+      width: auto;
+      height: 100%;
+      padding-bottom: 100px;
+}
+.whatdowedo{
+      font-size: 50px;
+      text-align: center;
+      align-items: center;
+      width: auto;
+}
+.reshta{
+      animation: animation5 2s;
+}
+@keyframes animation5{
+      0%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.h1{
+      animation: animation6 1s;
+      padding-top: 100px;
+}
+@keyframes animation6{
+      0%{padding-top: 0px;}
+      100%{padding-top: 100px;}
+}
+.links{
+      margin: 10px;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+}
+.linkstext{
+      font-size: 40px;
+      width: auto;
+}
+.sociallinks{
+      margin-top: 100px;
+      border-radius: 10px;
+      width: auto;
+      padding: 50px;
+}
+.aforlinks{
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      margin: 20px;
+      transition: 0.5s ease;
+      text-decoration: underline;
+      color: rgb(217, 255, 242);
+}
+.aforlinks:hover{
+      color: rgb(194, 129, 255);
+      text-shadow: #ffffff 0px 0px 20px;
+}
+.aforlinks:focus{
+      color: rgb(205, 197, 213);
+      text-shadow: #eaaeae 0px 0px 20px;
+}
+.block1{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+}
+.block1 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block1 .text_block2{
+      text-decoration: underline;
+}
+.block2{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+}
+.block2 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block2 .text_block2{
+      text-decoration: underline;
+}
+.block3{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+}
+.block3 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block3 .text_block2{
+      text-decoration: underline;
+}
+.block1, .block2, .block3{
+      display: inline-block;
+}
+.realises{
+      background-color: #3827b995;
+      height: 1100px;
+      padding-top: 100px;
+      width: 100%;
+}
+.realizetext{
+      font-size: 50px;
+      padding: 40px;
+}
+.lastrealizetext{
+      font-size: 40px;
+      color: #ffffff;
+      text-shadow: #4f9565 0px 0px 10px;
+      background-color: black;
+      width: auto;
+      float: right;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.blockrealize1{
+      border: #ffffff 1px solid;
+      padding: 10px;
+      width: auto;
+      height: 400px;
+      background: rgba(231, 158, 255, 0.588);
+      box-shadow: #ffffff 0px 0px 10px;
+}
+.blockrealize2{
+      border: #ffffff 1px solid;
+      padding: 10px;
+      width: auto;
+      height: 400px;
+      background: rgba(231, 158, 255, 0.565);
+      box-shadow: #ffffff 0px 0px 10px;
+}
+.imagerelise{
+      padding: 0px;
+      float: left;
+      margin: 0px;
+}
+.textto{
+      font-size: 30px;
+      color: #ffffff;
+      background: black;
+      margin: 0px;
+      padding: 0px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.relize_a{
+      color: white;
+      text-decoration: none;
+      background: none;
+      font-size: 33px;
+      background: #23432d;
+      height: 50px;
+}
+.audiorelize{
+      box-shadow: #4f9565 0px 0px 10px;
+      border-radius: 30px;
+}
+.aforlink{
+      font-size: 40px;
+      color: white;
+      text-decoration: underline;
+      transition: 0.5s ease;
+}
+.aforlink1{
+      font-size: 40px;
+      color: white;
+      text-decoration: underline;
+      transition: 0.5s ease;
+      margin-right: 20px;
+}
+.aforlink:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.aforlink1:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.all{
+      color: white;
+      text-decoration: none;
+      transition: 0.5s ease;
+      font-size: 30px;
+}
+.all:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.drumkittext{
+      font-size: 50px;
+      padding: 50px;
+}
+.reshta2{
+      background-color: black;
+      width: auto;
+      height: 2100px;
+}
+.drumkitimg{
+      box-shadow: rgb(255, 255, 255) 0px 0px 40px;
+      border-radius: 20px;
+}
+.h1genre{
+      font-size: 50px;
+      margin: 50px;
+}
+.drumkit{
+      width: auto;
+}
+.blockdrum{
+      border: #ffffff 1px solid;
+      border-radius: 5px;
+      box-shadow: #ffffff 0px 0px 10px;
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+      margin: 5px;
+      background-color: rgba(89, 78, 191, 0.811);
+      display: inline-block;
+}
+.genres img{
+      width: auto;
+      height: 100px;
+}
+.genres{
+      width: auto;
+      height: 800px;
+}
+.genre{
+      font-size: 25px;
+}
+.lotsof{
+      margin-top: 100px;
+      font-size: 100px;
+      color: white;
+      text-shadow: #ffffff 0px 0px 10px;
+}
+.adown{
+      color: white;
+      transition: 0.2s ease;
+      font-size: 50px;
+}
+.adown:hover{
+      color: #00c940;
+}
+.lot{
+      margin-bottom: 100px;
+}
+.see{
+      font-size: 60px;
+      color: white;
+      transition: 0.2s ease;
+}
+.see:hover{
+      color: #36ff76;
+}
+.downfor{
+      font-size: 50px;
+}
+.downlinkfora{
+      font-size: 40px;
+      color: white;
+      transition: 0.2s ease;
+}
+.downlinkfora:hover{
+      color: #00c940;
+}
+.p1{
+      animation: p1anim 5s;
+}
+.p2{
+      animation: p2anim 5s;
+}
+.p3{
+      animation: p3anim 5s;
+}
+@keyframes p1anim{
+      0%{opacity: 0%;}
+      20%{opacity: 100%;}
+      40%{opacity: 0%;}
+      60%{opacity: 100%;}
+      80%{opacity: 0%;}
+      99%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+@keyframes p2anim{
+      0%{opacity: 0%;}
+      30%{opacity: 100%;}
+      50%{opacity: 0%;}
+      70%{opacity: 100%;}
+      90%{opacity: 0%;}
+      99%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+@keyframes p3anim{
+      0%{opacity: 0%;}
+      35%{opacity: 100%;}
+      55%{opacity: 0%;}
+      75%{opacity: 100%;}
+      95%{opacity: 0%;}
+      99%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+.p1, .p2, .p3{
+      font-size: 100px;
+      opacity: 0%;
+      display: inline-block;
+}
+.download2{
+      animation: animspecial 5s;
+}
+@keyframes animspecial{
+      0%{opacity: 0%;}
+      99%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.generalll{
+      width: auto;
+      height: auto;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+      margin: 0px;
+      padding: 0px;
+}
+body{
+      background-color: #352b5b;
+      background-image: url("fon.jpg");
+      background-size: auto;
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Phudu', cursive;
+      width: auto;
+      height: auto;
+      background-size: 100%;
+}
+.background{
+      width: auto;
+      height: auto;
+      animation: animation 1s;
+      text-align: center;
+      align-items: center;
+      text-shadow: #ab96ff 0px 0px 10px;
+      font-size: 100px;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+}
+@keyframes animation{
+      0%{opacity: 0%; margin-bottom: 1000px;}
+      100%{opacity: 100%; margin-bottom: 0px;}
+}
+.background2{
+      width: auto;
+      height: 400px;
+      animation: animation 2s;
+}
+.p_1_background{
+      animation: animation2 5s;
+      width: auto;
+}
+.p_2_background{
+      animation: animation3 6s;
+      width: auto;
+}
+.p_3_background{
+      animation: animation4 5s;
+      width: auto;
+}
+.p_unique{
+      font-size: 100px;
+      float: center;
+}
+.p_unique, .p_default1, .p_default2{
+      margin: 0px;
+      cursor: default;
+      width: auto;
+}
+@keyframes animation2{
+      0%{opacity: 0%;}
+      15%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+@keyframes animation3{
+      0%{opacity: 0%;}
+      30%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+@keyframes animation4{
+      0%{opacity: 0%;}
+      60%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.what_do_we_do{
+      background: black;
+      width: auto;
+      height: 100%;
+      padding-bottom: 100px;
+}
+.whatdowedo{
+      font-size: 50px;
+      text-align: center;
+      align-items: center;
+      width: auto;
+}
+.reshta{
+      animation: animation5 2s;
+}
+@keyframes animation5{
+      0%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.h1{
+      animation: animation6 1s;
+      padding-top: 100px;
+}
+@keyframes animation6{
+      0%{padding-top: 0px;}
+      100%{padding-top: 100px;}
+}
+.links{
+      margin: 10px;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+}
+.linkstext{
+      font-size: 40px;
+      width: auto;
+}
+.sociallinks{
+      margin-top: 100px;
+      border-radius: 10px;
+      width: auto;
+      padding: 50px;
+}
+.aforlinks{
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      margin: 20px;
+      transition: 0.5s ease;
+      text-decoration: underline;
+      color: rgb(217, 255, 242);
+}
+.aforlinks:hover{
+      color: rgb(194, 129, 255);
+      text-shadow: #ffffff 0px 0px 20px;
+}
+.aforlinks:focus{
+      color: rgb(205, 197, 213);
+      text-shadow: #eaaeae 0px 0px 20px;
+}
+.block1{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+      background-image: url("istockphoto-1303829700-612x612.jpg");
+      background-attachment: fixed;
+      background-size: auto;
+}
+.block1 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block1 .text_block2{
+      text-decoration: underline;
+}
+.block2{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+      background-image: url("istockphoto-1303829700-612x612.jpg");
+      background-attachment: fixed;
+      background-size: auto;
+}
+.block2 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block2 .text_block2{
+      text-decoration: underline;
+}
+.block3{
+      border: #ffffff solid 2px;
+      width: auto;
+      padding: 10px;
+      box-shadow: #ffffff 0px 0px 10px;
+      margin: 50px;
+      background-image: url("istockphoto-1303829700-612x612.jpg");
+      background-attachment: fixed;
+      background-size: auto;
+}
+.block3 .text_block{
+      color: aquamarine;
+      text-shadow: #4f9565 0px 0px 20px;
+}
+.block3 .text_block2{
+      text-decoration: underline;
+}
+.block1, .block2, .block3{
+      display: inline-block;
+}
+.relizeaudio{
+      height: 100px;
+}
+.realises{
+      background-color: #3827b995;
+      height: 1100px;
+      padding-top: 100px;
+      width: auto;
+}
+.realizetext{
+      font-size: 50px;
+      padding: 40px;
+}
+.lastrealizetext{
+      font-size: 40px;
+      color: #ffffff;
+      text-shadow: #4f9565 0px 0px 10px;
+      background-color: black;
+      width: auto;
+      float: right;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.blockrealize1{
+      border: #ffffff 1px solid;
+      padding: 10px;
+      width: auto;
+      height: 400px;
+      background: rgba(231, 158, 255, 0.588);
+      box-shadow: #ffffff 0px 0px 10px;
+      background-image: url("1674341967_foni-club-p-fon-krasnii-dlya-avatarki-2.jpg");
+      background-size: auto;
+}
+.blockrealize2{
+      border: #ffffff 1px solid;
+      padding: 10px;
+      width: auto;
+      height: 400px;
+      background: rgba(231, 158, 255, 0.565);
+      box-shadow: #ffffff 0px 0px 10px;
+      background-image: url("1674341967_foni-club-p-fon-krasnii-dlya-avatarki-2.jpg");
+      background-size: auto;
+}
+.imagerelise{
+      padding: 0px;
+      float: left;
+      margin: 0px;
+}
+.textto{
+      font-size: 30px;
+      color: #ffffff;
+      background: black;
+      margin: 0px;
+      padding: 0px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.relize_a{
+      color: white;
+      text-decoration: none;
+      background: none;
+      font-size: 33px;
+      background: #23432d;
+      height: 50px;
+}
+.audiorelize{
+      box-shadow: #4f9565 0px 0px 10px;
+      border-radius: 30px;
+}
+.aforlink{
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      transition: 0.5s ease;
+}
+.aforlink1{
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      transition: 0.5s ease;
+      margin-right: 20px;
+}
+.aforlink:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.aforlink1:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.all{
+      color: white;
+      text-decoration: none;
+      transition: 0.5s ease;
+      font-size: 30px;
+}
+.all:hover{
+      color: rgb(255, 148, 148);
+      text-shadow: red 0px 0px 10px;
+}
+.drumkittext{
+      font-size: 50px;
+      padding: 50px;
+}
+.reshta2{
+      background-color: black;
+      width: auto;
+      height: 1850px;
+}
+.drumkitimg{
+      box-shadow: rgb(255, 255, 255) 0px 0px 40px;
+      border-radius: 20px;
+}
+.h1genre{
+      font-size: 50px;
+      margin: 50px;
+}
+.drumkit{
+      width: auto;
+}
+.blockdrum{
+      border: #ffffff 1px solid;
+      border-radius: 5px;
+      box-shadow: #ffffff 0px 0px 10px;
+      width: auto;
+      height: 150px;
+      padding: 15px;
+      margin: 5px;
+      background-color: rgba(89, 78, 191, 0.811);
+      background-image: url("phon.jfif");
+      display: inline-block;
+}
+.genres img{
+      width: auto;
+      height: 100px;
+}
+.genres{
+      width: auto;
+      height: 800px;
+}
+.genre{
+      font-size: 25px;
+}
+.lotsof{
+      font-size: 100px;
+      color: white;
+      text-shadow: #ffffff 0px 0px 10px;
+}
+.adown{
+      color: white;
+      transition: 0.2s ease;
+      font-size: 50px;
+}
+.adown:hover{
+      color: #00c940;
+}
+.lot{
+      margin-bottom: 100px;
+}
+.see{
+      font-size: 60px;
+      color: white;
+      transition: 0.2s ease;
+}
+.see:hover{
+      color: #36ff76;
+}
+.downfor{
+      font-size: 20px;
+}
+.downlinkfora{
+      font-size: 40px;
+      color: white;
+      transition: 0.2s ease;
+}
+.downlinkfora:hover{
+      color: #00c940;
+}
+.span20{
+      float: left;
+}
+.span21{
+      float: right;
+}
+.span20, .span21{
+      color: #79ffa4;
+      background-color: #ab96ff99;
+}
+.dada{
+      background-color: black;
+      height: 1000px;
+}
+.p1{
+      animation: p1anim 4s;
+      width: auto;
+}
+.p2{
+      animation: p2anim 2s;
+}
+.p3{
+      animation: p3anim 2s;
+}
+@keyframes p1anim{
+      0%{opacity: 50%;}
+      20%{opacity: 100%;}
+      40%{opacity: 50%;}
+      60%{opacity: 100%;}
+      80%{opacity: 50%;}
+      99%{opacity: 100%;}
+      100%{opacity: 50%;}
+}
+@keyframes p2anim{
+      0%{opacity: 0%;}
+      30%{opacity: 100%;}
+      50%{opacity: 0%;}
+      70%{opacity: 100%;}
+      90%{opacity: 0%;}
+      99%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+@keyframes p3anim{
+      0%{opacity: 0%;}
+      35%{opacity: 100%;}
+      55%{opacity: 0%;}
+      75%{opacity: 100%;}
+      95%{opacity: 0%;}
+      99%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+.p1, .p2, .p3{
+      font-size: 100px;
+      opacity: 0%;
+      display: inline-block;
+}
+.download2{
+      animation: animspecial 4s;
+}
+@keyframes animspecial{
+      0%{opacity: 0%;}
+      99%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.generalll{
+      width: auto;
+      height: auto;
+}
