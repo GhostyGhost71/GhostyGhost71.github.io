@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=`, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="blood beats icon.png" type="image/x-icon">
+      <title>Blood Mask Beats | Home</title>
+</head>
+<body>
+      <div class="headlinks" align="center">
+            <a href="Home.html"> <b> Home </b> </a>
+            <a href="Other.html">Other</a>
+            <a href="About.html">About</a>
+      </div>
+      
+      
+      <hr width="100%" height="2px" color="white"> <br>
+      <button id="searchButton">Search by categories</button> <br clear="all"> <br clear="all">
+      <div class="categories" id="categories" style="display: none;">
+            <button id="phonkButton"> Phonk </button> <button id="electroButton">Electronic</button> <button id="opiumButton">Opium</button> <button id="witchhouseButton">Witch house</button>
+      </div> <br clear="all">      
+
+<div class="Phonk" id="phonk">
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Phonk</p>
+            <img src="crushed.png" width="280px"> <br>
+            <p class="pMusicBox">Crushed</p>
+            <a href="ZIP files/Crushed C minor 120bpm.zip" download class="aMusicBox">Download ZIP file</a>
+            <audio controls>
+                  <source src="music/Crushed.mp3">
+            </audio>
+            </div>
+      </div>
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Phonk</p>
+            <img src="!WINDS.png" width="280px"> <br>
+            <p class="pMusicBox">Tired_Phonk</p>
+            <a href="" download class="aMusicBox">Download ZIP file</a>
+            <audio controls>
+                  <source src="A little cloud.mp3">
+            </audio>
+            </div>
+      </div>
+
+</div> 
+
+<div class="Opium" id="opium">
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Opium</p>
+            <img src="forgotten.png" width="280px"> <br>
+            <p class="pMusicBox">Forgotten</p>
+            <a href="ZIP files/Forgotten C minor 180bpm.zip" class="aMusicBox">Download ZIP file</a>
+            <audio controls id="audio1">
+                  <source src="music/Project_111(blood mask beats).mp3">
+            </audio>
+            </div>
+      </div>
+
+</div> 
+
+<div class="Witch house" id="witchhouse">
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Witch house</p>
+            <img src="samurai.png" width="280px"> <br>
+            <p class="pMusicBox">Samurai</p>
+            <a href="ZIP files/Samurai C minor 130bpm.zip" class="aMusicBox">Download ZIP file</a>
+            <audio controls>
+                  <source src="music/blood mask beats samurai.mp3">
+            </audio>
+            </div>
+      </div>
+
+</div>
+
+<div class="Electronic" id="electro">
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Electro</p>
+            <img src="!WINDS.png" width="280px"> <br>
+            <p class="pMusicBox">Tired_Electronic</p>
+            <a href="" download class="aMusicBox">Download ZIP file</a>
+            <audio controls>
+                  <source src="A little cloud.mp3">
+            </audio>
+            </div>
+      </div>
+
+      <div class="MusicBox">
+            <div class="MusicBoxContent" align="center">
+            <p class="BoxName">Electro</p>
+            <img src="!WINDS.png" width="280px"> <br>
+            <p class="pMusicBox">Tired_Electronic</p>
+            <a href="" download class="aMusicBox">Download ZIP file</a>
+            <audio controls>
+                  <source src="A little cloud.mp3">
+            </audio>
+            </div>
+      </div>
+
+</div>
+
+      <script>
+let searchButton = document.getElementById("searchButton")
+let categories = document.getElementById("categories")
+let phonkButton = document.getElementById("phonkButton")
+let electroButton = document.getElementById("electroButton")
+let phonk = document.getElementById("phonk")
+let electro = document.getElementById("electro")
+let opiumButton = document.getElementById("opiumButton")
+let opium = document.getElementById("opium")
+let witchhouseButton = document.getElementById("witchhouseButton")
+let witchhouse = document.getElementById("witchhouse")
+
+searchButton.onclick = function(){
+      if(categories.style.display === "none"){
+            categories.style.display = "block"
+      }else{
+            categories.style.display = "none"
+      }
+}
+phonkButton.onclick = function(){
+      if(phonkButton.innerText === "Phonk"){
+            phonkButton.innerText = "Phonk✅"
+            phonk.style.display = "block"
+      }else{ 
+            phonkButton.innerText = "Phonk"
+            phonk.style.display = "none"
+      }
+}
+electroButton.onclick = function(){
+      if(electroButton.innerText === "Electronic"){
+            electroButton.innerText = "Electronic✅"
+            electro.style.display = "block"
+      }else{ 
+            electroButton.innerText = "Electronic"
+            electro.style.display = "none"
+      }
+}
+opiumButton.onclick = function(){
+      if(opiumButton.innerText === "Opium"){
+            opiumButton.innerText = "Opium✅"
+            opium.style.display = "block"
+      }else{ 
+            opiumButton.innerText = "Opium"
+            opium.style.display = "none"
+      }
+}
+witchhouseButton.onclick = function(){
+      if(witchhouseButton.innerText === "Witch house"){
+            witchhouseButton.innerText = "Witch house✅"
+            witchhouse.style.display = "block"
+      }else{ 
+            witchhouseButton.innerText = "Witch house"
+            witchhouse.style.display = "none"
+      }
+}
+      </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body{
+      background-color: black;
+      color: white;
+      font-family: 'Work Sans', sans-serif;
+}
+#searchButton{
+      font-family: 'Work Sans', sans-serif;
+      color: white;
+      text-decoration: none;
+      transition: .2s ease;
+      font-size: 60px;
+      background: none;
+      cursor: pointer;
+}
+#searchButton:hover{
+      color: antiquewhite;
+      text-shadow: 0px 0px 10px antiquewhite;
+}
+#opium{
+      display: none;
+}
+#phonk{
+      display: none;
+}
+#electro{
+      display: none;
+}
+#witchhouse{
+      display: none;
+}
+p{
+      margin: 0px;
+      padding: 0px;
+}
+.headlinks > a{
+      color: white;
+      text-decoration: none;
+      transition: .2s ease;
+      font-size: 60px;
+      margin-left: 15px;
+      margin-right: 15px;
+}
+.headlinks > a:hover{
+      color: antiquewhite;
+      text-shadow: 0px 0px 10px antiquewhite;
+}
+.MusicBox{
+      border: 1px solid white;
+      width: 400px;
+      height: 400px;
+      display: inline-block;
+      margin: 0px;
+      padding: 0px;
+      background-image: url('blood\ beats\ background.png');
+      background-size: 100%;
+      margin: 10px;
+}
+audio{
+      width: 360px;
+      height: 25px;
+}
+.pMusicBox{
+      font-size: 30px;
+      margin: 0px;
+      padding: 0px;
+}
+.headlinks{
+      background-image: url('blood\ beats\ icon.png');
+      background-size: 15%;
+      background-attachment: fixed;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position-x: right;
+}
+.aMusicBox{
+      color: white;
+      font-size: 25px;
+      transition: 0.2s ease;
+}
+.aMusicBox:hover{
+      color: antiquewhite;
+      text-shadow: 0px 0px 10px antiquewhite;
+}
+.BoxName{
+      color: white;
+      border: 1px solid white;
+      width: 58px;
+      font-size: 18px;
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+}
+.a-for-ul{
+      color: white;
+      font-size: 50px;
+      transition: 0.2s ease;
+      text-decoration: none;
+}
+.a-for-ul:hover{
+      color: aqua;
+      text-shadow: 0px 0px 10px aqua;
+}
+.p-for-install{
+      font-size: 35px;
+      color: white;
+}
+.p-for-install > span{
+      font-size: 50px;
+}
+.back-from-install{
+      font-size: 30px;
+      color: white;
+}
+.categories > button{
+      font-size: 30px;
+      background: none;
+      color: white;
+}
+.a-for-ul > span{
+      text-decoration: underline;
+      color: antiquewhite;
+}
