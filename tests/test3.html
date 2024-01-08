@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body id="body1">
+      <p id="pName">Ваше ім'я:</p>
+      <input type="text" placeholder="Ваше ім'я" id="name">
+      <p id="pAge">Ваш вік:</p>
+      <input type="text" placeholder="Ваш вік" id="age">
+      <button id="saveCardButton">Зберегти карточку</button>
+      <button id="showCardButton">Показати карточку</button>
+      <script>
+let name = document.getElementById("name")
+let age = document.getElementById("age")
+let body = document.getElementById("body1")
+let saveCardButton = document.getElementById("saveCardButton")
+let showCardButton = document.getElementById("showCardButton")
+
+saveCardButton.onclick = function saveCard(){
+      let NameOfValue = name.value
+      localStorage.setItem('ValueOfname', JSON.stringify(NameOfValue))
+      let nameAlert = localStorage.getItem('ValueOfname')
+      alert("Збережено!")
+}
+showCardButton.onclick = function showCard(){
+      let nameAlert = localStorage.getItem('ValueOfname')
+      alert(nameAlert)
+}
+      </script>
+</body>
+</html>

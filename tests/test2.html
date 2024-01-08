@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <input type="text" id="textInput" placeholder="Введіть елемент списку" />
+      <button id="addButton">Додати елемент</button>
+      <ul id="list"></ul>
+      
+      <script>
+let textInput = document.getElementById("textInput");
+let addButton = document.getElementById("addButton");
+let list = document.getElementById("list");
+
+addButton.onclick = function () {
+	let listItem = document.createElement("li");
+	listItem.innerText = textInput.value;
+	list.appendChild(listItem);
+	textInput.value = "";
+};
+      </script>
+</body>
+</html>

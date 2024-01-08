@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <p id="p">Введіть пароль!</p>
+      <input type="text" id="textInput">
+      <button id="submitButton">Підтвердити</button>
+      <p id="pText" style="display: none;">Bla bla bla</p>
+<script>
+var textInput = document.getElementById("textInput")
+var submitButton = document.getElementById("submitButton")
+var p = document.getElementById("p")
+var isRegistered = false
+var pText = document.getElementById("pText")
+
+submitButton.onclick = function(){
+      if(textInput.value === "1234"){
+            isRegistered = true
+            p.innerText = "Вас зареєстровано! Перезагрузіть сторінку для продовження!"
+            localStorage.setItem('Registered', JSON.stringify(isRegistered))
+      }
+      else if(textInput.value !== "1234"){
+            p.innerText = "Ви ввели неправильний пароль, спробуйте ще раз!"
+            isRegistered = false
+            localStorage.setItem('Registered', JSON.stringify(isRegistered))
+      }else{}
+}
+
+if(localStorage.getItem('Registered') == "true"){
+      pText.style.display = "block"
+}else if(localStorage.getItem('Registered') !== "true"){
+      pText.style.display = "none"
+}
+</script>
+
+</body>
+</html>

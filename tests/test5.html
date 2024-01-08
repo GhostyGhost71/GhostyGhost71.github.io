@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+      body{
+            background-color: black;
+      }
+      h1{
+            color: white;
+            font-size: 70px;
+            margin: 0px;
+            padding: 0px;
+      }
+      button{
+            border: 0px solid black;
+            position: absolute;
+            background-color: green; 
+            color: white; 
+            font-size: 80px;
+      }
+      button:active{
+            background-color: rgb(103, 140, 48);
+      }
+      </style>
+</head>
+<body>
+      <h1 id="h1">Кількість кліків: 0</h1>
+      <button id="clicksButton">Click</button>
+<script>
+var h1 = document.getElementById("h1")
+var clicksButton = document.getElementById("clicksButton")
+var clicks = localStorage.getItem('clickTimes')
+var resetButton = document.getElementById("resetButton")
+h1.innerText = `Кількість кліків: ${localStorage.getItem('clickTimes')}`
+
+clicksButton.onclick = function(){
+      var clickTimes = ++clicks
+      localStorage.setItem('clickTimes', JSON.stringify(clickTimes))
+      h1.innerText = `Кількість кліків: ${clicks}`
+}
+resetButton.onclick = function(){
+      clicks = 0
+      h1.innerText = `Кількість кліків: ${clicks}`
+}
+
+</script>
+
+</body>
+</html>
