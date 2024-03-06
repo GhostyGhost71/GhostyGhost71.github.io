@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body{
+                  background-color: black;
+                  color: white;
+            }
+      </style>
+</head>
+<body>
+      <div class="content" id="content">
+            <p id="pInner"></p>
+            <input type="text" id="textInput">
+            <button id="createContactButton">Create contact</button>
+            <button id="showContacts">Show contacts</button>
+      </div>
+
+      <script>
+var contacts = []
+var content = document.getElementById("content")
+var pInner = document.getElementById("pInner")
+var textInput = document.getElementById("textInput")
+var createContactButton = document.getElementById("createContactButton")
+var showContacts = document.getElementById("showContacts")
+
+createContactButton.onclick = function(){
+      var contactElement = document.createElement("button")
+      contactElement.innerHTML = textInput.value
+      content.appendChild(contactElement)
+      pInner.innerHTML = "Success!"
+      contacts.push(contactElement)
+      localStorage.setItem('contact', contactElement)
+}
+showContacts.onclick = function(){
+      localStorage.getItem('contact')
+      contacts = pInner.innerHTML
+}
+      </script>
+</body>     
+</html>

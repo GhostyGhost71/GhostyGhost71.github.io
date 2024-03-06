@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+
+      <input type="text" id="textInput" placeholder="What fruit do you want?">
+      <button id="submitButton">Submit</button>
+      <p id="pInnerText"></p>
+
+      <script>
+var textInput = document.getElementById("textInput")
+var submitButton = document.getElementById("submitButton")
+var pInnerText = document.getElementById("pInnerText")
+
+var fruits = ["apple", "banana", "grapes", "pineapple", "strawberries", "orange"]
+var index = -1
+
+submitButton.onclick = function(){
+      for(let i = 0; i < fruits.length; i++){
+      if(fruits[i] == textInput.value){
+            index = i
+            break
+      }
+      }
+      if(index !== -1){
+            pInnerText.innerHTML = `${textInput.value} Знайдено на позиції ${index}`
+      }else{
+            pInnerText.innerHTML = `Елемент не знайдено`
+      }
+}
+      </script>
+</body>
+</html>

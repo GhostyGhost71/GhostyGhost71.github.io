@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+      <title>Document</title>
+      <style>
+            *{
+                  margin: 0px;
+            }
+            body{
+                  font-family: 'Roboto Mono', monospace;
+                  background-color: black;
+                  color: white;
+            }
+            .block > span{
+                  font-size: 15px;
+            }
+            .block{
+                  border: 1px solid black;
+                  max-width: 500px;
+                  background-color: rgb(78, 63, 92);
+                  box-shadow: 0px 0px 15px rgb(137, 113, 158);
+                  border-radius: 5px;
+                  display: inline-block;
+                  padding: 15px;
+                  margin: 5px;
+            }
+            .noteTextName{
+                  font-size: 20px;
+            }
+      </style>
+</head>
+<body>
+      <div class="content" id="content">
+            <div class="block">
+                  <p class="noteTextName"> <span>Ім'я:</span> 
+                        <span id="noteTextName">Введіть ім'я </span> 
+                        <input type="text" id="noteTextNameInput" style="display: none;"> 
+                        <button id="editNameButton" align="right">✎</button> </p> 
+
+                  <p class="noteTextName"> <span>Номер телефону:</span> 
+                        <span id="noteTextNumber">Введіть номер телефону </span> 
+                        <input type="text" id="noteTextNumberInput" style="display: none;"> 
+                        <button id="editNumberButton" align="right">✎</button> </p>
+
+                  <p class="noteTextName"> <span>День народження:</span> 
+                        <span id="noteTextBirthday">День народження </span> 
+                        <input type="text" id="noteTextBirthdayInput" style="display: none;"> 
+                        <button id="editBirthdayButton" align="right">✎</button> </p>
+            </div>
+
+            <div class="block">
+                  <p class="noteTextName"> <span>Ім'я:</span> 
+                        <span id="noteTextName1">Введіть ім'я </span> 
+                        <input type="text" id="noteTextNameInput1" style="display: none;"> 
+                        <button id="editNameButton1" align="right">✎</button> </p> 
+
+                  <p class="noteTextName"> <span>Номер телефону:</span> 
+                        <span id="noteTextNumber1">Введіть номер телефону </span> 
+                        <input type="text" id="noteTextNumberInput1" style="display: none;"> 
+                        <button id="editNumberButton1" align="right">✎</button> </p>
+
+                  <p class="noteTextName"> <span>День народження:</span> 
+                        <span id="noteTextBirthday1">День народження </span> 
+                        <input type="text" id="noteTextBirthdayInput1" style="display: none;"> 
+                        <button id="editBirthdayButton1" align="right">✎</button> </p>
+            </div>
+      </div>
+
+      <script>
+var content = document.getElementById("content")
+var editNameButton = document.getElementById("editNameButton")
+var editNumberButton = document.getElementById("editNumberButton")
+var noteTextName = document.getElementById("noteTextName")
+var noteTextNameInput = document.getElementById("noteTextNameInput")
+var noteTextNumber = document.getElementById("noteTextNumber")
+var noteTextNumberInput = document.getElementById("noteTextNumberInput")
+var noteTextBirthday = document.getElementById("noteTextBirthday")
+var noteTextBirthdayInput = document.getElementById("noteTextBirthdayInput")
+var editBirthdayButton = document.getElementById("editBirthdayButton")
+
+noteTextName.innerHTML = localStorage.getItem('Name')
+noteTextNumber.innerHTML = localStorage.getItem('Number')
+noteTextBirthday.innerHTML = localStorage.getItem('Birthday')
+
+editNameButton.onclick = function(){
+      if(editNameButton.innerHTML == "✎"){
+            editNameButton.innerHTML = "✓"
+            noteTextNameInput.style.display = "block"
+      }else{
+            localStorage.setItem('Name', JSON.stringify(noteTextNameInput.value))
+            noteTextName.innerHTML = localStorage.getItem('Name')
+            noteTextNameInput.style.display = "none"
+            editNameButton.innerHTML = "✎"
+      }
+}
+
+editNumberButton.onclick = function(){
+      if(editNumberButton.innerHTML == "✎"){
+            editNumberButton.innerHTML = "✓"
+            noteTextNumberInput.style.display = "block"
+      }else{
+            localStorage.setItem('Number', JSON.stringify(noteTextNumberInput.value))
+            noteTextNumber.innerHTML = localStorage.getItem('Number')
+            noteTextNumberInput.style.display = "none"
+            editNumberButton.innerHTML = "✎"
+      }
+}
+
+editBirthdayButton.onclick = function(){
+      if(editBirthdayButton.innerHTML == "✎"){
+            editBirthdayButton.innerHTML = "✓"
+            noteTextBirthdayInput.style.display = "block"
+      }else{
+            localStorage.setItem('Birthday', JSON.stringify(noteTextBirthdayInput.value))
+            noteTextBirthday.innerHTML = localStorage.getItem('Birthday')
+            noteTextBirthdayInput.style.display = "none"
+            editBirthdayButton.innerHTML = "✎"
+      }
+}
+
+
+var editNameButton1 = document.getElementById("editNameButton1")
+var editNumberButton1 = document.getElementById("editNumberButton1")
+var noteTextName1 = document.getElementById("noteTextName1")
+var noteTextNameInput1 = document.getElementById("noteTextNameInput1")
+var noteTextNumber1 = document.getElementById("noteTextNumber1")
+var noteTextNumberInput1 = document.getElementById("noteTextNumberInput1")
+var noteTextBirthday1 = document.getElementById("noteTextBirthday1")
+var noteTextBirthdayInput1 = document.getElementById("noteTextBirthdayInput1")
+var editBirthdayButton1 = document.getElementById("editBirthdayButton1")
+
+noteTextName1.innerHTML = localStorage.getItem('Name1')
+noteTextNumber1.innerHTML = localStorage.getItem('Number1')
+noteTextBirthday1.innerHTML = localStorage.getItem('Birthday1')
+
+editNameButton1.onclick = function(){
+      if(editNameButton1.innerHTML == "✎"){
+            editNameButton1.innerHTML = "✓"
+            noteTextNameInput1.style.display = "block"
+      }else{
+            localStorage.setItem('Name1', JSON.stringify(noteTextNameInput1.value))
+            noteTextName1.innerHTML = localStorage.getItem('Name1')
+            noteTextNameInput1.style.display = "none"
+            editNameButton1.innerHTML = "✎"
+      }
+}
+
+editNumberButton1.onclick = function(){
+      if(editNumberButton1.innerHTML == "✎"){
+            editNumberButton1.innerHTML = "✓"
+            noteTextNumberInput1.style.display = "block"
+      }else{
+            localStorage.setItem('Number1', JSON.stringify(noteTextNumberInput1.value))
+            noteTextNumber1.innerHTML = localStorage.getItem('Number1')
+            noteTextNumberInput1.style.display = "none"
+            editNumberButton1.innerHTML = "✎"
+      }
+}
+
+editBirthdayButton1.onclick = function(){
+      if(editBirthdayButton1.innerHTML == "✎"){
+            editBirthdayButton1.innerHTML = "✓"
+            noteTextBirthdayInput1.style.display = "block"
+      }else{
+            localStorage.setItem('Birthday1', JSON.stringify(noteTextBirthdayInput1.value))
+            noteTextBirthday1.innerHTML = localStorage.getItem('Birthday1')
+            noteTextBirthdayInput1.style.display = "none"
+            editBirthdayButton1.innerHTML = "✎"
+      }
+}
+      </script>
+</body>
+</html>

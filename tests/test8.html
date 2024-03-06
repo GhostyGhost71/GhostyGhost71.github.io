@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contacts</title>
+</head>
+<body>
+      <h1>Контакти</h1>
+      <button id="createContactButton">Створити контакт</button>
+<div id="parentDiv">
+      <div id="display" style="display: none;">
+      <input type="text" id="nameInput" placeholder="Ім'я">
+      <input type="text" id="surnameInput" placeholder="Прізвище">
+      <input type="text" id="numberInput" placeholder="Номер телефону">
+      <button id="createButton">Створити контакт</button>
+      </div>
+</div>
+<script>
+var createContactButton = document.getElementById("createContactButton")
+var display = document.getElementById("display")
+var parentDiv = document.getElementById("parentDiv")
+var createButton = document.getElementById("createButton")
+var nameInput = document.getElementById("nameInput")
+var surnameInput = document.getElementById("surnameInput")
+var numberInput = document.getElementById("numberInput")
+
+createContactButton.onclick = function(){
+      if(display.style.display === "none"){
+            display.style.display = "block"
+      }else{
+            display.style.display = "none"
+      }
+}
+createButton.onclick = function(){
+      display.style.display = "none"
+      var parentDivItemName = document.createElement("p")
+      parentDivItemName.innerText = `Ім'я: ${nameInput.value}`
+      localStorage.setItem('Name', JSON.stringify(parentDivItemName.innerText))
+      parentDiv.appendChild(parentDivItemName)
+      var parentDivItemSurname = document.createElement("p")
+      parentDivItemSurname.innerText = `Прізвище: ${surnameInput.value}`
+      localStorage.setItem('Surname', JSON.stringify(parentDivItemSurname.innerText))
+      parentDiv.appendChild(parentDivItemSurname)
+      var parentDivItemNumber = document.createElement("p")
+      parentDivItemNumber.innerText = `Номер телефону: ${numberInput.value}`
+      localStorage.setItem('Number', JSON.stringify(parentDivItemNumber.innerText))
+      parentDiv.appendChild(parentDivItemNumber)
+      var parentDivItemButtonDelete = document.createElement("button")
+      parentDivItemButtonDelete.innerHTML = "Видалити"
+      parentDiv.appendChild(parentDivItemButtonDelete)
+
+      parentDivItemButtonDelete.onclick = function(){
+      parentDiv.removeChild(parentDivItemName)
+      parentDiv.removeChild(parentDivItemSurname)
+      parentDiv.removeChild(parentDivItemNumber)
+      parentDiv.removeChild(parentDivItemButtonDelete)
+}
+}
+if(localStorage.getItem('Name') == "Ім'я:"){
+      display.style.display = "none"
+      var parentDivItemName = document.createElement("p")
+      parentDivItemName.innerText = `Ім'я: ${nameInput.value}`
+      localStorage.setItem('Name', JSON.stringify(parentDivItemName.innerText))
+      parentDiv.appendChild(parentDivItemName)
+      var parentDivItemSurname = document.createElement("p")
+      parentDivItemSurname.innerText = `Прізвище: ${surnameInput.value}`
+      localStorage.setItem('Surname', JSON.stringify(parentDivItemSurname.innerText))
+      parentDiv.appendChild(parentDivItemSurname)
+      var parentDivItemNumber = document.createElement("p")
+      parentDivItemNumber.innerText = `Номер телефону: ${numberInput.value}`
+      localStorage.setItem('Number', JSON.stringify(parentDivItemNumber.innerText))
+      parentDiv.appendChild(parentDivItemNumber)
+      var parentDivItemButtonDelete = document.createElement("button")
+      parentDivItemButtonDelete.innerHTML = "Видалити"
+      parentDiv.appendChild(parentDivItemButtonDelete)
+}else{
+
+}
+
+</script>
+</body>
+</html>

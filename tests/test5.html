@@ -8,45 +8,122 @@
       <style>
       body{
             background-color: black;
+            color: white;
       }
       h1{
             color: white;
-            font-size: 70px;
+            font-size: 55px;
             margin: 0px;
             padding: 0px;
       }
       button{
-            border: 0px solid black;
-            position: absolute;
+            border: 0px solid rgb(255, 255, 255);
             background-color: green; 
             color: white; 
-            font-size: 80px;
+            font-size: 65px;
+      }
+      #showButton{
+            font-size: 30px;
+      }
+      #loadButton{
+            font-size: 30px;
       }
       button:active{
             background-color: rgb(103, 140, 48);
       }
+      p{
+            font-size: 40px;
+            margin: 0px;
+            padding: 0px;
+      }
       </style>
 </head>
-<body>
-      <h1 id="h1">Кількість кліків: 0</h1>
-      <button id="clicksButton">Click</button>
+<body id="body1">
+      <h1 id="h1">Times clicked: 0</h1>
+      <button id="clicksButton">Click</button> <br> <br>
+      <button id="showButton">Show my achievements</button>
+      <div id="showMe" style="display: none;">
+      <div id="achievementsParent">
+            <br> <button id="loadButton">Load</button>
+      </div>
+      </div>
 <script>
 var h1 = document.getElementById("h1")
 var clicksButton = document.getElementById("clicksButton")
 var clicks = localStorage.getItem('clickTimes')
-var resetButton = document.getElementById("resetButton")
-h1.innerText = `Кількість кліків: ${localStorage.getItem('clickTimes')}`
+var body = document.getElementById("body1")
+var showButton = document.getElementById("showButton")
+var loadButton = document.getElementById("loadButton")
+var achievementsParent = document.getElementById("achievementsParent")
+var showMe = document.getElementById("showMe")
+h1.innerText = `Times clicked: ${localStorage.getItem('clickTimes')}`
 
 clicksButton.onclick = function(){
       var clickTimes = ++clicks
       localStorage.setItem('clickTimes', JSON.stringify(clickTimes))
-      h1.innerText = `Кількість кліків: ${clicks}`
+      h1.innerText = `Times clicked: ${clicks}` 
 }
-resetButton.onclick = function(){
-      clicks = 0
-      h1.innerText = `Кількість кліків: ${clicks}`
+showButton.onclick = function(){
+      if(showMe.style.display === "none"){
+            showMe.style.display = "block"
+      }else{
+            showMe.style.display = "none"
+      }
 }
-
+loadButton.onclick = function(){
+      loadButton.style.display = "none"
+      if(clicks > 100 && clicks < 1000){
+            var p1 = document.createElement("p")
+            p1.innerText = "Wow! - 100 clicks (1/5)"
+            achievementsParent.appendChild(p1)
+      }else if(clicks > 1000 && clicks < 10000){
+            var p1 = document.createElement("p")
+            p1.innerText = "Wow! - 100 clicks (1/5)"
+            achievementsParent.appendChild(p1)
+            var p2 = document.createElement("p")
+            p2.innerText = "A thousand... - 1000 clicks (2/5)"
+            achievementsParent.appendChild(p2)
+      }else if(clicks > 10000 && clicks < 100000){
+            var p1 = document.createElement("p")
+            p1.innerText = "Wow! - 100 clicks (1/5)"
+            achievementsParent.appendChild(p1)
+            var p2 = document.createElement("p")
+            p2.innerText = "A thousand... - 1000 clicks (2/5)"
+            achievementsParent.appendChild(p2)
+            var p3 = document.createElement("p")
+            p3.innerText = "Just stop - 10 000 clicks (3/5)"
+            achievementsParent.appendChild(p3)
+      }else if(clicks > 100000 && clicks < 1000000){
+            var p1 = document.createElement("p")
+            p1.innerText = "Wow! - 100 clicks (1/5)"
+            achievementsParent.appendChild(p1)
+            var p2 = document.createElement("p")
+            p2.innerText = "A thousand... - 1000 clicks (2/5)"
+            achievementsParent.appendChild(p2)
+            var p3 = document.createElement("p")
+            p3.innerText = "Just stop - 10 000 clicks (3/5)"
+            achievementsParent.appendChild(p3)
+            var p4 = document.createElement("p")
+            p4.innerText = "Bruh - 100 000 clicks (4/5)"
+            achievementsParent.appendChild(p4)
+      }else if(clicks > 1000000 && clicks < 10000000){
+            var p1 = document.createElement("p")
+            p1.innerText = "Wow! - 100 clicks (1/5)"
+            achievementsParent.appendChild(p1)
+            var p2 = document.createElement("p")
+            p2.innerText = "A thousand... - 1000 clicks (2/5)"
+            achievementsParent.appendChild(p2)
+            var p3 = document.createElement("p")
+            p3.innerText = "Just stop - 10 000 clicks (3/5)"
+            achievementsParent.appendChild(p3)
+            var p4 = document.createElement("p")
+            p4.innerText = "Bruh - 100 000 clicks (4/5)"
+            achievementsParent.appendChild(p4)
+            var p5 = document.createElement("p")
+            p5.innerText = "What are you doing? - 1 000 000 clicks (5/5)"
+            achievementsParent.appendChild(p5)
+      }else {}
+}
 </script>
 
 </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            *{
+                  font-size: 40px;
+            }
+      </style>
+</head>
+<body id="body1">
+      <button id="createPasswordButton">Create password</button>
+      <input type="text" id="createPasswordText" style="display: none;">
+      <button id="acceptPasswordButton" style="display: none;">Accept</button>
+      <button id="loginByPasswordButton" style="display: none;">Login by password</button>
+      <input type="text" id="loginByPasswordText" style="display: none;">
+      <button id="acceptLoginByPasswordButton" style="display: none;">Accept</button>
+
+      <script>
+var createPasswordButton = document.getElementById("createPasswordButton")
+var createPasswordText = document.getElementById("createPasswordText")
+var acceptPasswordButton = document.getElementById("acceptPasswordButton")
+var body = document.getElementById("body1")
+var loginByPasswordButton = document.getElementById("loginByPasswordButton")
+var loginByPasswordText = document.getElementById("loginByPasswordText")
+var acceptLoginByPasswordButton = document.getElementById("acceptLoginByPasswordButton")
+
+
+if(localStorage.getItem('Key')){
+      createPasswordButton.style.display = "none"
+      createPasswordText.style.display = "none"
+      acceptPasswordButton.style.display = "none"
+      loginByPasswordButton.style.display = "block"
+}else{
+      createPasswordButton.style.display = "block"
+      loginByPasswordButton.style.display = "none"
+}
+
+createPasswordButton.onclick = function(){
+      if(createPasswordText.style.display == "none"){
+            createPasswordText.style.display = "block"
+            acceptPasswordButton.style.display = "block"
+      }else{
+            createPasswordText.style.display = "none"
+            acceptPasswordButton.style.display = "none"
+      }
+}
+acceptPasswordButton.onclick = function(){
+      localStorage.setItem('Key', JSON.stringify(createPasswordText.value))
+      var p = document.createElement("p")
+      p.innerHTML = "Created"
+      body.appendChild(p)
+      createPasswordButton.style.display = "none"
+      createPasswordText.style.display = "none"
+      acceptPasswordButton.style.display = "none"
+      loginByPasswordButton.style.display = "block"
+}
+loginByPasswordButton.onclick = function(){
+      if(loginByPasswordText.style.display == "none"){
+            loginByPasswordText.style.display = "block"
+            acceptLoginByPasswordButton.style.display = "block"
+      }else{
+            loginByPasswordText.style.display = "none"
+            acceptLoginByPasswordButton.style.display = "none"
+      }
+}
+acceptLoginByPasswordButton.onclick = function(){
+      if(`"${loginByPasswordText.value}"` == localStorage.getItem('Key')){
+            var p = document.createElement("p")
+            p.innerHTML = "Accepted!"
+            body.appendChild(p)
+      }else{
+            var p = document.createElement("p")
+            p.innerHTML = "Declined!"
+            body.appendChild(p)
+      }
+}
+      </script>
+</body>
+</html>

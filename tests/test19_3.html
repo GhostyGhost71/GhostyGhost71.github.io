@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Виведення двовимірного масиву в HTML</title>
+		<style>
+			.row {
+			  display: flex;
+			}
+			.element {
+			  width: 30px;
+			  height: 30px;
+			  border: 1px solid black;
+			  text-align: center;
+			  line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="matrixContainer"></div>
+
+		<script>
+			let matrix = [
+				[1, 2, 3],
+				[4, 5, 6],
+				[7, 8, 9],
+			];
+
+			// Отримуємо посилання на контейнер у DOM
+			const matrixContainer = document.getElementById("matrixContainer");
+
+			// Цикл для створення рядків
+			for (let i = 0; i < matrix.length; i++) {
+				const row = document.createElement("div");
+				row.className = "row";
+
+				// Цикл для створення елементів у рядку
+				for (let j = 0; j < matrix[i].length; j++) {
+					const element = document.createElement("div");
+					element.className = "element";
+					element.textContent = matrix[i][j];
+
+					// Додаємо елемент до рядка
+					row.appendChild(element);
+				}
+
+				// Додаємо рядок до основного контейнера
+				matrixContainer.appendChild(row);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            label{
+                  font-size: 30px;
+            }
+            input{
+                  width: 400px;
+                  height: 30px;
+            }
+            button{
+                  font-size: 40px;
+            }
+      </style>
+</head>
+<body>
+      <div class="center" align="center">
+            <div class="width" style="width: 1000px;">
+      <h1 id="justh1">Написати любовне письмо!</h1>
+      <div class="content" id="content">
+      <label>Напишіть своє ім'я:</label> <br>
+      <input type="text" id="query1" required>
+      <br>
+      <br>
+      <label>Будь яка тварина або предмет:</label> <br>
+      <input type="text" id="query2" required>
+      <br>
+      <br>
+      <label>Будь яке дієслово в минулому часі першої особи однини(особа: я):</label> <br>
+      <input type="text" id="query3" required>
+      <br>
+      <br>
+      <label>Побутовий предмет:</label> <br>
+      <input type="text" id="query4" required>
+      <br>
+      <br>
+      <label>Скільки часу?</label> <br>
+      <input type="text" id="query5" required>
+      <br>
+      <br>
+      <label>Куди?</label> <br>
+      <input type="text" id="query7" required>
+      <br>
+      <br>
+      <button id="generateButton">Згенерувати</button>
+</div>
+      <p id="generatedText" style="font-size: 30px;"></p>
+</div>
+</div>
+      <script>
+var query1 = document.getElementById("query1")
+var query2 = document.getElementById("query2")
+var query3 = document.getElementById("query3")
+var query4 = document.getElementById("query4")
+var query5 = document.getElementById("query5")
+var query7 = document.getElementById("query7")
+var generatedText = document.getElementById("generatedText")
+var content = document.getElementById("content")
+
+var generateButton = document.getElementById("generateButton")
+
+generateButton.onclick = function(){
+      generatedText.innerHTML = `Привіт, це я – ${query1.value}! Я давно хотів тобі в дечому признатися... Я ${query3.value} тебе, ${query2.value}! Ти прекрасна як ${query4.value}! Я чекав цього моменту ${query5.value}, і ось я осмілився це зробити. Виходи ${query7.value}, ${query2.value}!`
+
+}
+
+      </script>
+</body>
+</html>

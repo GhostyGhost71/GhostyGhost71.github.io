@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+      <title>Document</title>
+      <style>
+            *{
+                  margin: 0px;
+                  padding: 0px;
+            }
+            body{
+                  font-family: 'Open Sans', sans-serif;
+                  background-color: black;
+                  color: white;
+                  z-index: 1;
+            }
+            button:focus{
+                  color: red;
+                  background: none;
+                  transition: 0.2s ease;
+            }
+            .content{
+                  width: 100%;
+                  display: inline-block;
+            }
+            .imgMan{
+                  position: fixed;
+                  width: 50%;
+                  z-index: -2;
+            }
+            .slotsInventoryButton{
+                  background: rgba(185, 183, 255, 0.483);
+                  border: none;
+                  width: 140px;
+                  margin: 0px;
+                  padding: 0px;
+                  cursor: pointer;
+                  font-size: 22px;
+                  padding: 3px;
+            }
+            .inventoryImage{
+                  width: 70px;
+            }
+            th{
+                  border: 1px solid rgb(255, 255, 255);
+                  margin: 0px;
+                  padding: 0px;
+                  width: 140px;
+                  height: 140px;
+                  float: left;
+                  background-color: rgba(255, 81, 81, 0.19);
+            }
+            #hints{
+                  animation: an1 1s infinite;
+                  font-size: 20px;
+                  color: rgb(255, 0, 0);
+                  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.735);
+            }
+            #startButton{
+                  font-size: 40px;
+            }
+            #pInner{
+                  font-size: 30px;
+            }
+            #resumeButton{
+                  opacity: 0%;
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  background: none;
+                  z-index: -1;
+            }
+            @keyframes an1{
+                  0%{opacity: 100%; text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.735);}
+                  50%{opacity: 70%; text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.368);}
+                  100%{opacity: 100%; text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.735);}
+            }
+      </style>
+</head>
+<body>
+
+      <button id="resumeButton" align="center" style="display: none;">resume</button>
+
+
+      <div class="content" align="center" id="content">
+
+      <table>
+            
+            <tr id="tr1"><th> <button id="slot1" class="slotsInventoryButton">Використати</button> 
+                  <img src="">
+                  <span style="font-size: 25px;">Пістолет</span>  <br> 
+                  <img src="pistol.png" class="inventoryImage">
+            
+            </th> 
+            
+            <th id="slot2"></th> 
+            
+            <th id="slot3"></th> 
+            
+            <th id="slot4"></th> </tr>
+      </table>
+
+      <p id="hints2"></p>
+
+      <p id="hints">для початку натисніть старт</p>
+
+      <button id="startButton">Start</button>
+
+      <p id="pInner"></p>
+
+      </div>
+      <script>
+var pInner = document.getElementById("pInner")
+var startButton = document.getElementById("startButton")
+var hints = document.getElementById("hints")
+var hints2 = document.getElementById("hints2")
+var content = document.getElementById("content")
+var resumeButton = document.getElementById("resumeButton")
+var tr1 = document.getElementById("tr1")
+var slot1 = document.getElementById("slot1")
+var slot2 = document.getElementById("slot2")
+var slot3 = document.getElementById("slot3")
+var slot4 = document.getElementById("slot4")
+
+startButton.onclick = function(){
+
+      pInner.innerHTML = "Що ж, розпочнемо"
+      startButton.style.display = "none"
+      hints.innerHTML = "для продовження натисніть на вільне поле"
+      resumeButton.style.display = "block"
+      resumeButton.onclick = function(){
+            pInner.innerHTML = "Правила прості - Ти вибираєш карту. Можеш померти, можеш і ні."
+            hints.innerHTML = "для продовження натисніть на вільне поле"
+      resumeButton.onclick = function(){
+            pInner.innerHTML = "Вибирай."
+            hints.innerHTML = "натисніть на картку"
+            const cardButton1 = document.createElement("button")
+            cardButton1.innerHTML = "Карта 1"
+            cardButton1.style.fontSize = "40px"
+            content.appendChild(cardButton1)
+            const cardButton2 = document.createElement("button")
+            cardButton2.innerHTML = "Карта 2"
+            cardButton2.style.fontSize = "40px"
+            content.appendChild(cardButton2)
+            resumeButton.style.display = "none"
+      }
+      }
+
+}
+      </script>
+</body>
+</html>
