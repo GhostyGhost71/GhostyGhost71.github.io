@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element {
+            background-color: black;
+            padding: 30px;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .element:active {
+            background-color: rgb(139, 139, 139);
+        }
+    </style>
+</head>
+
+<body id="body1" align="center">
+
+    <h1 id="TITLE" style="font-size: 40px;"></h1>
+
+    <div class="row">
+        <button class="element" id="el1"></button>
+        <button class="element" id="el2"></button>
+        <button class="element" id="el3"></button>
+    </div>
+    <div class="row">
+        <button class="element" id="el4"></button>
+        <button class="element" id="el5"></button>
+        <button class="element" id="el6"></button>
+    </div>
+    <div class="row">
+        <button class="element" id="el7"></button>
+        <button class="element" id="el8"></button>
+        <button class="element" id="el9"></button>
+    </div>
+
+    <button id="resetButton" style="font-size: 50px;">Reset</button>
+    <script>
+        var el1 = document.getElementById("el1")
+        var el2 = document.getElementById("el2")
+        var el3 = document.getElementById("el3")
+        var el4 = document.getElementById("el4")
+        var el5 = document.getElementById("el5")
+        var el6 = document.getElementById("el6")
+        var el7 = document.getElementById("el7")
+        var el8 = document.getElementById("el8")
+        var el9 = document.getElementById("el9")
+        var body = document.getElementById("body1")
+        var TITLE = document.getElementById("TITLE")
+        var resetButton = document.getElementById("resetButton")
+        var game = {
+            currentPlayer: "O"
+        }
+        var array = ["el1", "el2", "el3", "el4", "el5", "el6", "el7", "el8", "el9"]
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function stepOfBot() {
+            if(TITLE.innerHTML == "O wins!"){
+                return
+            }
+            setTimeout(() => {
+                  
+
+                  /////////O///////////
+
+
+                  //0 0 0
+                  //0 x x
+                  //0 x x
+                  if(el5.innerHTML == "O" && el6.innerHTML == "O" && el8.innerHTML == "O" && el9.innerHTML == "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 0 0
+                  //x x 0
+                  //x x 0
+                  else if(el4.innerHTML == "O" && el5.innerHTML == "O" && el7.innerHTML == "O" && el8.innerHTML == "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //x x 0
+                  //x x 0
+                  //0 0 0
+                  else if(el1.innerHTML == "O" && el2.innerHTML == "O" && el4.innerHTML == "O" && el5.innerHTML == "O" && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x x
+                  //0 x x
+                  //0 0 0
+                  else if(el2.innerHTML == "O" && el3.innerHTML == "O" && el5.innerHTML == "O" && el6.innerHTML == "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+
+                  //x 0 x
+                  //0 0 0
+                  //0 0 0
+                  else if(el1.innerHTML == "O" && el3.innerHTML == "O" && el2.innerHTML != "X"){
+                        el2.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el2"), 1)
+                        el2.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //0 0 x
+                  //0 0 0
+                  //0 0 x
+                  else if(el3.innerHTML == "O" && el9.innerHTML == "O" && el6.innerHTML != "X"){
+                        el6.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el6"), 1)
+                        el6.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //x 0 0
+                  //0 0 0
+                  //x 0 0
+                  else if(el1.innerHTML == "O" && el7.innerHTML == "O" && el4.innerHTML != "X"){
+                        el4.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el4"), 1)
+                        el4.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //0 0 0
+                  //0 0 0
+                  //x 0 x
+                  else if(el7.innerHTML == "O" && el9.innerHTML == "O" && el8.innerHTML != "X"){
+                        el8.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el8"), 1)
+                        el8.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+                  //////////X/////////////
+                  
+
+
+
+
+
+
+
+                  else if(el1.innerHTML == "X" && el3.innerHTML == "X" && el2.innerHTML != "O"){
+                        el2.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el2"), 1)
+                        el2.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el1.innerHTML == "X" && el7.innerHTML == "X" && el4.innerHTML != "O"){
+                        el4.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el4"), 1)
+                        el4.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+                  //x x 0
+                  //x x 0
+                  //x x 0
+                  else if(el7.innerHTML == "X" && el8.innerHTML == "X"  && el9.innerHTML != "O"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el1.innerHTML == "X" && el2.innerHTML == "X" && el3.innerHTML != "O"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el4.innerHTML == "X" && el5.innerHTML == "X" && el6.innerHTML != "O"){
+                        el6.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el6.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //x x x
+                  //x x x
+                  //0 0 0
+                  else if(el1.innerHTML == "X" && el4.innerHTML == "X" && el7.innerHTML != "O"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el2.innerHTML == "X" && el5.innerHTML == "X" && el8.innerHTML != "O"){
+                        el8.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el8"), 1)
+                        el8.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el3.innerHTML == "X" && el6.innerHTML == "X" && el9.innerHTML != "O"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 0 0
+                  //x x x
+                  //x x x
+                  else if(el4.innerHTML == "X" && el7.innerHTML == "X" && el1.innerHTML != "O"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el8.innerHTML == "X" && el5.innerHTML == "X" && el2.innerHTML != "O"){
+                        el2.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el2"), 1)
+                        el2.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el6.innerHTML == "X" && el9.innerHTML == "X" && el3.innerHTML != "O"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x x
+                  //0 x x
+                  //0 x x
+                  else if(el2.innerHTML == "X" && el3.innerHTML == "X" && el1.innerHTML != "O"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el5.innerHTML == "X" && el6.innerHTML == "X" && el4.innerHTML != "O"){
+                        el4.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el4"), 1)
+                        el4.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el8.innerHTML == "X" && el9.innerHTML == "X" && el7.innerHTML != "O"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //x x 0
+                  //x x 0
+                  //x x 0
+                  else if(el7.innerHTML == "O" && el8.innerHTML == "O"  && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el1.innerHTML == "O" && el2.innerHTML == "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el4.innerHTML == "O" && el5.innerHTML == "O" && el6.innerHTML != "X"){
+                        el6.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el6.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //x x x
+                  //x x x
+                  //0 0 0
+                  else if(el1.innerHTML == "O" && el4.innerHTML == "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el2.innerHTML == "O" && el5.innerHTML == "O" && el8.innerHTML != "X"){
+                        el8.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el8"), 1)
+                        el8.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el3.innerHTML == "O" && el6.innerHTML == "O" && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 0 0
+                  //x x x
+                  //x x x
+                  else if(el4.innerHTML == "O" && el7.innerHTML == "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el8.innerHTML == "O" && el5.innerHTML == "O" && el2.innerHTML != "X"){
+                        el2.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el2"), 1)
+                        el2.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el6.innerHTML == "O" && el9.innerHTML == "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x x
+                  //0 x x
+                  //0 x x
+                  else if(el2.innerHTML == "O" && el3.innerHTML == "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el5.innerHTML == "O" && el6.innerHTML == "O" && el4.innerHTML != "X"){
+                        el4.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el4"), 1)
+                        el4.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el8.innerHTML == "O" && el9.innerHTML == "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+
+
+
+                  ////////////O/////////////////
+
+
+
+
+
+
+
+
+                  //0 0 0
+                  //0 x 0
+                  //x 0 x
+                  else if(el5.innerHTML == "O" && el7.innerHTML == "O" && el9.innerHTML == "O" && el8.innerHTML != "X"){
+                        el8.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el8"), 1)
+                        el8.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //0 0 x
+                  //0 x 0
+                  //0 0 x
+                  else if(el5.innerHTML == "O" && el3.innerHTML == "O" && el9.innerHTML == "O" && el6.innerHTML != "X"){
+                        el6.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el6"), 1)
+                        el6.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //x 0 x
+                  //0 x 0
+                  //0 0 0
+                  else if(el1.innerHTML == "O" && el3.innerHTML == "O" && el5.innerHTML == "O" && el2.innerHTML != "X"){
+                        el2.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el2"), 1)
+                        el2.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  //x 0 0
+                  //0 x 0
+                  //x 0 0
+                  else if(el1.innerHTML == "O" && el5.innerHTML == "O" && el7.innerHTML == "O" && el4.innerHTML != "X"){
+                        el4.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el4"), 1)
+                        el4.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x 0
+                  //x 0 0
+                  //0 x 0
+                  else if(el2.innerHTML == "O" && el4.innerHTML == "O" && el8.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x 0
+                  //0 0 x
+                  //0 x 0
+                  else if(el2.innerHTML == "O" && el6.innerHTML == "O" && el8.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x 0
+                  //x 0 x
+                  //0 0 0
+                  else if(el2.innerHTML == "O" && el6.innerHTML == "O" && el4.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 0 0
+                  //x 0 x
+                  //0 x 0
+                  else if(el8.innerHTML == "O" && el6.innerHTML == "O" && el4.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //x 0 x
+                  //0 x 0
+                  //x 0 x
+                  else if(el1.innerHTML == "O" && el5.innerHTML == "O" && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el3.innerHTML == "O" && el5.innerHTML == "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el5.innerHTML == "O" && el7.innerHTML == "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el9.innerHTML == "O" && el5.innerHTML == "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el1.innerHTML == "O" && el9.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el7.innerHTML == "O" && el3.innerHTML == "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  //0 x 0
+                  //x x x
+                  //0 x 0
+                  else if(el2.innerHTML == "O" && el4.innerHTML == "O" && el5.innerHTML == "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el2.innerHTML == "O" && el5.innerHTML == "O" && el6.innerHTML == "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el5.innerHTML == "O" && el6.innerHTML == "O" && el8.innerHTML == "O" && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el4.innerHTML == "O" && el5.innerHTML == "O" && el8.innerHTML == "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+
+
+
+
+                  //////////X///////////
+
+
+                  //x 0 x
+                  //0 0 0
+                  //x 0 x
+                  else if(el5.innerHTML != "O" && el5.innerHTML != "X"){
+                        el5.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el5"), 1)
+                        el5.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  else if(el1.innerHTML != "O" && el1.innerHTML != "X"){
+                        el1.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el1"), 1)
+                        el1.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el3.innerHTML != "O" && el3.innerHTML != "X"){
+                        el3.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el3"), 1)
+                        el3.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+                  
+                  else if(el7.innerHTML != "O" && el7.innerHTML != "X"){
+                        el7.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el7"), 1)
+                        el7.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }else if(el9.innerHTML != "O" && el9.innerHTML != "X"){
+                        el9.innerHTML = "X"
+                        game.currentPlayer = "O"
+                        array.splice(array.indexOf("el9"), 1)
+                        el9.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+                  
+                  else{
+                        const randIndex = getRandomInt(array.length)
+                        var cell = document.getElementById(array[randIndex])
+                        cell.innerText = "X"
+                        game.currentPlayer = "O"
+                        array.splice(randIndex, 1)
+                        cell.setAttribute('Disabled', 'true')
+                        console.log(array);
+                        RENDER()
+                  }
+
+
+
+                  
+                  
+                  
+                  
+            }, 300);
+        }
+       
+
+        function RENDER() {
+            TITLE.innerHTML = `Current player: ${game.currentPlayer}`
+            if (el1.innerHTML == "X" && el2.innerHTML == "X" && el3.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el1.style.backgroundColor = "red"
+                el2.style.backgroundColor = "red"
+                el3.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el4.innerHTML == "X" && el5.innerHTML == "X" && el6.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el4.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el6.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el7.innerHTML == "X" && el8.innerHTML == "X" && el9.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el7.style.backgroundColor = "red"
+                el8.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el1.innerHTML == "X" && el4.innerHTML == "X" && el7.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el1.style.backgroundColor = "red"
+                el4.style.backgroundColor = "red"
+                el7.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el2.innerHTML == "X" && el5.innerHTML == "X" && el8.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el2.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el8.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el3.innerHTML == "X" && el6.innerHTML == "X" && el9.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el3.style.backgroundColor = "red"
+                el6.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el1.innerHTML == "X" && el5.innerHTML == "X" && el9.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el1.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el3.innerHTML == "X" && el5.innerHTML == "X" && el7.innerHTML == "X") {
+                TITLE.innerHTML = "X wins!"
+                el3.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el7.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            }
+
+
+
+            else if (el1.innerHTML == "O" && el2.innerHTML == "O" && el3.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el1.style.backgroundColor = "red"
+                el2.style.backgroundColor = "red"
+                el3.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el4.innerHTML == "O" && el5.innerHTML == "O" && el6.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el4.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el6.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el7.innerHTML == "O" && el8.innerHTML == "O" && el9.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el7.style.backgroundColor = "red"
+                el8.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el1.innerHTML == "O" && el4.innerHTML == "O" && el7.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el1.style.backgroundColor = "red"
+                el4.style.backgroundColor = "red"
+                el7.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el2.innerHTML == "O" && el5.innerHTML == "O" && el8.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el2.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el8.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el3.innerHTML == "O" && el6.innerHTML == "O" && el9.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el3.style.backgroundColor = "red"
+                el6.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el1.innerHTML == "O" && el5.innerHTML == "O" && el9.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el1.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el9.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            } else if (el3.innerHTML == "O" && el5.innerHTML == "O" && el7.innerHTML == "O") {
+                TITLE.innerHTML = "O wins!"
+                el3.style.backgroundColor = "red"
+                el5.style.backgroundColor = "red"
+                el7.style.backgroundColor = "red"
+                el1.setAttribute('disabled', 'true')
+                el2.setAttribute('disabled', 'true')
+                el3.setAttribute('disabled', 'true')
+                el4.setAttribute('disabled', 'true')
+                el5.setAttribute('disabled', 'true')
+                el6.setAttribute('disabled', 'true')
+                el7.setAttribute('disabled', 'true')
+                el8.setAttribute('disabled', 'true')
+                el9.setAttribute('disabled', 'true')
+            }
+        }
+        RENDER()
+
+        resetButton.onclick = function () {
+            location.reload()
+        }
+
+        function newStep(elParam, elValue) {
+            if (game.currentPlayer == "O") {
+                const myIndex = array.indexOf(elValue)
+                array.splice(myIndex, 1)
+                elParam.innerHTML = "O"
+                elParam.style.backgroundColor = "rgb(39, 39, 39)"
+                game.currentPlayer = "X"
+                RENDER()
+                elParam.setAttribute('disabled', 'true')
+                stepOfBot()
+            }
+        }
+
+        el1.onclick = () => newStep(el1, "el1")
+        el2.onclick = () => newStep(el2, "el2")
+        el3.onclick = () => newStep(el3, "el3")
+        el4.onclick = () => newStep(el4, "el4")
+        el5.onclick = () => newStep(el5, "el5")
+        el6.onclick = () => newStep(el6, "el6")
+        el7.onclick = () => newStep(el7, "el7")
+        el8.onclick = () => newStep(el8, "el8")
+        el9.onclick = () => newStep(el9, "el9")
+
+    </script>
+</body>
+
+</html>
