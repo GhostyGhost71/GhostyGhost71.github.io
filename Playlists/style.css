@@ -1,0 +1,121 @@
+html{
+      scroll-behavior: smooth;
+      max-height: fit-content;
+}
+body{
+      background-color: black;
+      color: white;
+      font-family: "Ubuntu Sans Mono", monospace;
+      font-optical-sizing: auto;
+      font-style: normal;
+}
+h1{
+      font-size: 70px;
+      margin: 0px;
+      margin-bottom: 50px;
+      padding: 0px;
+}
+.exampleSpan{
+      font-size: 30px;
+}
+.inputButton > button{
+      cursor: pointer;
+      border: none;
+      color: white;
+      background-color: rgb(188, 86, 206);
+      box-shadow: 0px 0px 20px rgb(188, 86, 206);
+      border-radius: 10px;
+      transition: 0.3s ease;
+}
+.inputButton > button:hover{
+      color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+}
+input::placeholder {
+      color: rgb(159, 155, 155);
+    }
+.inputButton > input{
+      color: white;
+      background-color: rgb(202, 183, 205);
+      border: 1px solid rgb(188, 86, 206);
+      box-shadow: 0px 0px 20px rgba(188, 86, 206, 0.425);
+      border-radius: 10px;
+      transition: 0.3s ease;
+}
+.inputButton > input:focus{
+      background-color: rgb(61, 30, 67);
+      border: 1px solid rgb(255, 255, 255);
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
+      border-radius: 10px;
+}
+.addToPlaylistButtonClass{
+      cursor: pointer;
+      border: none;
+      color: white;
+      background-color: rgb(188, 86, 206);
+      box-shadow: 0px 0px 20px rgb(188, 86, 206);
+      border-radius: 10px;
+      transition: 0.3s ease;
+}
+.addToPlaylistButtonClass:hover{
+      color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0);
+}
+.playlistListTextClass > p > button{
+      background: white;
+      color: blue;
+      border: 1px solid rgba(255, 255, 255, 0);
+      font-size: 50px;
+      transition: 0.3s;
+}
+.playlistListTextClass > p > button:focus{
+      border-radius: 10px;
+      background: black;
+      color: white;
+      border: 1px solid white;
+      font-size: 50px;
+}
+.settingsButtonClass{
+      float: left;
+      font-size: 50px;
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+}
+.fadeIn{
+      animation: fadeIn 0.5s;
+}
+@keyframes fadeIn{
+      0%{opacity: 0%;}
+      100%{opacity: 100%;}
+}
+.fadeOut{
+      animation: fadeOut 0.5s;
+}
+@keyframes fadeIn{
+      0%{opacity: 100%;}
+      100%{opacity: 0%;}
+}
+.rotate{
+      animation: rotate 0.5s;
+}
+@keyframes rotate{
+      0%{margin-left: 100px; opacity: 0%;}
+      100%{margin-left: 0px; opacity: 100%;}
+}
+.rotateOut{
+      animation: rotateOut 0.5s;
+}
+@keyframes rotateOut{
+      0%{margin-left: 0px; opacity: 100%;}
+      100%{margin-left: 100px; opacity: 0%;}
+}
+.player > button{
+      background: none;
+      color: white;
+      font-size: 30px;
+}
+.player{
+      display: flex;
+}

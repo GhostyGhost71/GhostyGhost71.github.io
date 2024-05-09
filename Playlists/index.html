@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+</head>
+<body align="center">
+      <button id="settingsButtonOpen" class="settingsButtonClass" style="z-index: 3; float: left; background: none; color: white; font-size: 20px;">▢</button>
+      <span id="spanId1" style="color: gray; font-size: 15px; float: left; display: block;"><-- You can add tracks there</span>
+      <br> <br>
+
+      <div align="center" class="invisible2" id="invisible2" style="display: none; max-width: 400px; max-height: 720px; padding: 10px; background-color: rgb(45, 45, 45); z-index: 1; position: absolute; justify-content: center; float: left; height: 100%;">
+      <button id="settingsButtonClose" class="settingsButtonClass" style="z-index: 3; float: left; background: none; color: red; font-size: 20px;">✘</button>
+      <button id="changePlayType" style="font-size: 20px; color: white; float: right; background: none;">⮂</button>      
+      <span style="color: gray; cursor: default;">Volume <br>
+            <input type="range" id="rangeInput" step="10">
+            </span>
+      <br>
+      <br>
+      <span style="color: gray; cursor: default; margin-bottom: 10px;" class="exampleSpan"><b> Example: </b><br>
+      C:\Your Library\
+      </span> <br>
+      <div class="inputButton">
+      <input type="text" placeholder="Load your library" id="loadLibraryInput" style="font-size: 30px; margin-bottom: 10px;"> <br>
+      <button id="loadLibraryButton" style="font-size: 25px; margin-bottom: 100px;">Load</button>
+</div>
+      <button id="addToPlaylistButton" style="font-size: 50px; margin-bottom: 100px;" class="addToPlaylistButtonClass">Add to playlist</button>
+<br>
+<br>
+      <div id="invisible" style="display: none;">
+            <span style="color: gray;">Don't forget! You can upload files only from path, that you indicated!</span> <br>
+            <input type="file" accept=".mp3, .wav, .flac" id="linkInput" placeholder="Link to track" onchange="readFile(this)"> <br>
+      </div>
+</div>
+
+
+
+      <h1 style="z-index: -1;">Your playlist</h1>
+
+      <div class="center" align="center" style="display: flex; justify-content: center; position: fixed; z-index: 0;">
+            <div class="playerMain" style="display: flex; justify-content: center; flex-direction: column; min-width: 100%;">
+                  <p id="titleInput" style="font-size: 30px; margin: 0px; cursor: default;"></p> 
+                  <hr style="height: 2px; width: 0px; background-color: white;" id="timeInput" align="left"></hr>
+                  <div class="player" id="player" style="font-size: 40px;">
+                        
+                        <button id="previousTrackButton">«</button>
+                        <button id="playTracksButton">▶︎</button>
+                        <button id="nextTrackButton">»</button> 
+                        
+                  </div> 
+                  
+                  </div>
+            </div>
+
+      <p id="playlistListText" class="playlistListTextClass" style="z-index: -1; background-color: rgb(33, 33, 33); box-shadow: 0px 0px 10px rgb(33, 33, 33); padding: 10px; margin-top: 200px;">
+            
+      </p>
+
+     
+      
+
+      <script src="script.js"></script>
+</body>
+</html>
