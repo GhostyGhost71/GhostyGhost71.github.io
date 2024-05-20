@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            *{
+                  margin: 0px;
+            }
+            body{
+                  font-family: "Montserrat", sans-serif;
+            }
+            p{
+                  margin: 0px;
+                  font-size: 40px;
+            }
+            span{
+                  color: grey;
+                  display: flex;
+                  display: inline-block;
+            }
+            .pEl{
+                  font-size: 30px;
+                  display: flex;
+                  align-items: center;
+            }
+            .pEl > span{
+                  color: gray;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  font-size: 15px;
+            }
+            .deleteButton{
+                  color: red;
+                  background-color: rgb(255, 255, 255);
+                  border: 0.5px solid black;
+            }
+      </style>
+</head>
+<body>
+      <p id="h1fd"></p>
+
+      <button id="setFlag">Set flag</button>
+
+
+      <script>
+if(localStorage.getItem('id')){
+      var id = JSON.parse(localStorage.getItem('id'))
+}else{
+      var id = 0
+}
+if(localStorage.getItem('flags')){
+      var flags = JSON.parse(localStorage.getItem('flags'))
+      flags.forEach(element => {
+            var pEl = document.createElement("p")
+            pEl.className = "pEl"
+            pEl.innerHTML = `<img src="flag.png" width="25px">  <button id="deleteButton${element.milisecond}" class="deleteButton">Delete</button> ${element.year} <span>Year</span> ${element.month} <span>Month</span> ${element.day}<span>Day</span>${element.hour}<span>Hour</span>${element.minute}<span>Minute</span>${element.second}<span>Second</span>${Math.round(element.milisecond / 100)}<span>Milisecond</span>`
+            document.body.appendChild(pEl)
+            var deleteButton = document.getElementById(`deleteButton${element.milisecond}`)
+            var index = flags.indexOf(element)
+            deleteButton.onclick = () => {
+                  flags.splice(index, 1)
+                  localStorage.setItem('flags', JSON.stringify(flags))
+                  location.reload()
+            }
+      })
+}else{
+      var flags = []
+}
+var h1fd = document.getElementById("h1fd")
+var setFlag = document.getElementById("setFlag")
+
+
+const timer = setInterval(() => {
+      var now = new Date()
+      var d = now.getDate()
+      var y = now.getFullYear()
+      if(now.getMonth() + 1 >= 10){
+            var m = now.getMonth() + 1
+      }else{
+            var m = `0${now.getMonth() + 1}`
+      }
+      var h = now.getHours()
+      if(now.getMinutes() >= 10){
+            var mn = now.getMinutes()
+      }else{
+            var mn = `0${now.getMinutes()}`
+      }
+      var s = now.getSeconds()
+      var ms = now.getMilliseconds()
+      h1fd.innerHTML = `${y} <span>Year</span> ${m} <span>Months</span> ${d}<span>Days</span>${h}<span>Hours</span>${mn}<span>Minutes</span>${s}<span>Seconds</span>${Math.round(ms / 100)}<span>Miliseconds</span>`
+}, 10)
+
+
+setFlag.onclick = () => {
+      var now = new Date()
+      var d = now.getDate()
+      var y = now.getFullYear()
+      var m = now.getMonth() + 1
+      var h = now.getHours()
+      if(now.getMinutes() >= 10){
+            var mn = now.getMinutes()
+      }else{
+            var mn = parseInt(`0${now.getMinutes()}`)
+      }
+      var s = now.getSeconds()
+      var ms = now.getMilliseconds()
+      var el = {
+            id: id,
+            year: y,
+            month: m,
+            day: d,
+            hour: h,
+            minute: mn,
+            second: s,
+            milisecond: ms,
+      }
+      flags.push(el)
+      localStorage.setItem('flags', JSON.stringify(flags))
+      location.reload()
+      id++
+      localStorage.setItem('id', JSON.stringify(id))
+}
+      </script>
+</body>
+</html>
